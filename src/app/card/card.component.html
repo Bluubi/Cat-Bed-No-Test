@@ -1,0 +1,9 @@
+<ng-container *ngIf="cats| async as cats">
+  <ng-container *ngFor="let cat of cats">
+    <div class="flex flex-wrap shadow-md p-4 justify-center m-8 min-h-fit rounded-t-lg bg-white">
+      <img class="rounded-t-lg max-w-sm max-h-60 object-cover object-top" [ngSrc]="cat.url" width="300" height="300" alt="a picture about a cute cats"/>
+      <app-curiosity></app-curiosity>
+    </div>
+  </ng-container>
+</ng-container>
+

@@ -1,0 +1,9 @@
+<ng-container *ngIf="curiosities| async as curiosities; else loading">
+  <ng-container *ngFor="let curiosity of curiosities.data">
+    <p class="text-3xl text-cyan-700 mt-3 p-2" > Do you know that...?</p>
+    <p class="text-lg text-justify p-2 max-h-56 min-h-max h-18 overflow-auto"> {{ curiosity }}</p>
+  </ng-container>
+</ng-container>
+
+
+<ng-template #loading>loading...</ng-template>

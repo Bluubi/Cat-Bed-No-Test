@@ -1,10 +1,16 @@
-import { Component } from '@angular/core';
+import {Component, HostBinding, ViewChild} from '@angular/core';
+import {CardComponent} from "./card/card.component";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'cat-api-testbed';
+
+  @ViewChild('card') cardComponent!: CardComponent;
+  title = 'Card cat creator';
+
+  askForNewRandomCard(){
+    this.cardComponent.askForRandomCat();
+  }
 }
